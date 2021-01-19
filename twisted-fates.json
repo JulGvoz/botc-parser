@@ -1,0 +1,164 @@
+[
+  {
+    "id": "_meta",
+    "name": "Twisted Fates v1.8",
+    "author": "Zobody",
+    "logo": "https://i.ibb.co/w7xMHc5/script-icon.png",
+    "github": "https://github.com/JulGvoz/twisted-fates",
+    "helpers": [
+      "emptyset#9999",
+      "Sodium#6176"
+    ]
+  },
+  {
+    "image": "https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/arranged/zenith.png",
+    "id": "zenith",
+    "team": "peacebroker",
+    "name": "Zenith",
+    "firstNight": 0,
+    "otherNight": 5,
+    "reminders": [
+      "Safe"
+    ],
+    "ability": "Each night*, choose any number of players: if they are on the same team, they cannot die tonight."
+  },
+  {
+    "image": "https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/arranged/calamity.png",
+    "id": "calamity",
+    "team": "peacebroker",
+    "name": "Calamity",
+    "reminders": [
+      "Revive",
+      "Die",
+      "Used"
+    ],
+    "ability": "The 1st time you are executed (not the 1st day), all living players die & all dead players come back to life. You stay dead."
+  },
+  {
+    "image": "https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/arranged/elixir.png",
+    "id": "elixir",
+    "team": "peacebroker",
+    "name": "Elixir",
+    "reminders": [
+      "Safe"
+    ],
+    "ability": "You cannot die from execution if you were nominated by a fated."
+  },
+  {
+    "image": "https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/arranged/sleepwalker.png",
+    "id": "sleepwalker",
+    "team": "peacebroker",
+    "name": "Sleepwalker",
+    "setup": true,
+    "remindersGlobal": [
+      "Sleepwalker"
+    ],
+    "ability": "You do not know you are a Peacebroker. You think that you are either Vile or Fatebound."
+  },
+  {
+    "image": "https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/arranged/cutthroat.png",
+    "id": "cutthroat",
+    "team": "vile",
+    "name": "Cutthroat",
+    "firstNight": 0,
+    "otherNight": 35,
+    "reminders": [
+      "Nominated",
+      "Dies"
+    ],
+    "ability": "Each night*, choose a player who was nominated today: they die."
+  },
+  {
+    "image": "https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/arranged/savage.png",
+    "id": "savage",
+    "team": "vile",
+    "name": "Savage",
+    "firstNight": 0,
+    "otherNight": 45,
+    "reminders": [
+      "Last executee",
+      "Dies"
+    ],
+    "ability": "Each night*, choose a player: if they are not on the same team as last executee, they die."
+  },
+  {
+    "image": "https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/arranged/wanton.png",
+    "id": "wanton",
+    "team": "vile",
+    "name": "Wanton",
+    "firstNight": 0,
+    "otherNight": 15,
+    "reminders": [
+      "Evil nominated today",
+      "Dies"
+    ],
+    "ability": "Each night*, if you nominated today, all other non-evil players are poisoned tonight. Otherwise, a player dies tonight."
+  },
+  {
+    "image": "https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/arranged/neolith.png",
+    "id": "neolith",
+    "team": "vile",
+    "name": "Neolith",
+    "firstNight": 25,
+    "otherNight": 25,
+    "reminders": [
+      "Marked",
+      "Dies",
+      "Poisoned"
+    ],
+    "ability": "Each night, mark a player. If a marked player died today, all marked players are poisoned until dusk & a player dies tonight."
+  },
+  {
+    "image": "https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/arranged/weaver.png",
+    "id": "weaver",
+    "team": "fatebound",
+    "name": "Weaver",
+    "firstNight": 5,
+    "otherNight": 0,
+    "ability": "You start knowing the entire Grimoire. Players of your alignment register falsely to you in the Grimoire you see."
+  },
+  {
+    "image": "https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/arranged/seeker.png",
+    "id": "seeker",
+    "team": "fatebound",
+    "name": "Seeker",
+    "firstNight": 15,
+    "otherNight": 45,
+    "reminders": [
+      "Known",
+      "Learn another"
+    ],
+    "ability": "You start knowing a player & their alignment. When the player you know dies, you learn another."
+  },
+  {
+    "image": "https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/arranged/mangler.png",
+    "id": "mangler",
+    "team": "fatebound",
+    "name": "Mangler",
+    "firstNight": 0,
+    "otherNight": 65,
+    "ability": "Each night*, choose 2 players (not yourself): they swap alignments. If just 4 players live, you lose this ability."
+  },
+  {
+    "image": "https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/arranged/apostle.png",
+    "id": "apostle",
+    "team": "fatebound",
+    "name": "Apostle",
+    "firstNight": 0,
+    "otherNight": 55,
+    "reminders": [
+      "Nominated 1st"
+    ],
+    "ability": "Each night* you become the alignment of the 1st player who nominated today. When the game ends, you become fated."
+  },
+  {
+    "image": "https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/arranged/fated.png",
+    "id": "fated",
+    "team": "fatebound",
+    "name": "Fated",
+    "remindersGlobal": [
+      "Fated"
+    ],
+    "ability": "Global reminder for Fated team."
+  }
+]
