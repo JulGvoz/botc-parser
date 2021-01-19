@@ -68,9 +68,9 @@
       "Zenith can choose dead players."
     ],
     "examples": [
-      "Zenith chooses themselves. [Cutthroat](#Cutthroat) targets them, but Zenith does not die.",
-      "Zenith was marked by [Neolith](#Neolith) the previous night, and another marked player died today. Zenith chooses themselves and [Calamity](#Calamity), but [Calamity](#Calamity) is killed by the [Savage](#Savage).",
-      "Zenith chooses the [Apostle](#Apostle) and [Cutthroat](#Cutthroat). Neither of them are protected, because they are on different teams. The [Neolith](#Neolith)'s ability kills the [Apostle](#Apostle).",
+      "Zenith chooses themselves. Cutthroat targets them, but Zenith does not die.",
+      "Zenith was marked by Neolith the previous night, and another marked player died today. Zenith chooses themselves and Calamity, but Calamity is killed by the Savage.",
+      "Zenith chooses the Apostle and Cutthroat. Neither of them are protected, because they are on different teams. The Neolith's ability kills the Apostle.",
       "Zenith chooses the Weaver tonight. Cutthroat tries to kill the Weaver, but Weaver survives.",
       "Zenith chose themselves tonight. The next day, Calamity is executed. Zenith is killed by Calamity's ability."
     ]

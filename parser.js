@@ -22,7 +22,7 @@ fs.readFile(source_file, "utf8", (err, file_text) => {
 
     const teams = team_names.map(team_name => {
       return {
-        team_name: team_name,
+        name: team_name,
         roles: roles.filter(role => role.team === team_name)
       }
     })
@@ -33,6 +33,14 @@ fs.readFile(source_file, "utf8", (err, file_text) => {
     // link for loading the json file through bra1n tool
     const load_link = `${github_base}/${source_file}`
 
+    // replace Zenith => [Zenith](#Zenith)
+    const linkify = (str) => {
+      return roles.reduce((acc, role, index, arr) => {
+        return acc.replace(new RegExp(`${role.name}`, "g"), `[${role.name}](#${role.name})`)
+      }, str)
+    }
+
+
     const format_role = (role) => {
       return [
         `## ${role.name}`,
@@ -40,19 +48,32 @@ fs.readFile(source_file, "utf8", (err, file_text) => {
         // *sigh* - apparently I don't how to replace * -> \* ...
         `"${role.ability.replace("*", String.fromCharCode(92) + "*")}"`,
         "",
-        `<img src="${github_base}/master/original-icons/zenith.png" alt="${role.name} icon" width="100">`,
+        `<img src="${github_base}/master/original-icons/${role.id}.png" alt="${role.name} icon" width="100">`,
         "",
-        `${role.blurb}`,
+        ...(Array(role.blurb)),
         "",
-        ...(role.explanations.map(str => ` - ${str}`)),
+        ...(role.explanations ? role.explanations.map(str => ` - ${str}`) : ""),
         "",
-        "### Examples",
-        ...(role.examples.flatMap(str => {
-          return [str, ""]
-        }))
+        // if examples then list out: [example1, "", example2, "", ...]
+        ...(role.examples ? ["### Examples",
+          ...(role.examples.flatMap(str => {
+            return [linkify(str), ""]
+          }))] : "")
       ]
     }
-    console.log(format_role(roles[0]))
+
+    const capitalize = (str) => str.slice(0, 1).toUpperCase() + str.slice(1)
+
+    const format_team = (team) => {
+      return [
+        `# ${capitalize(team.name)}`,
+        // If a team has a description in meta.teams, write it out here
+        ...(Array(meta.teams ? meta.teams[team.name] : "")),
+        ...(team.roles.flatMap(format_role))
+      ]
+    }
+
+    const teams_formatted = teams.flatMap(format_team)
 
     // roles that act on the first night, ordered
     const first_night =
@@ -75,7 +96,7 @@ fs.readFile(source_file, "utf8", (err, file_text) => {
     const nights_str =
       nights_table
         .map(([first, other]) => {
-          return `|${first ? first.name : ""}|${other ? other.name : ""}|`
+          return `|${first ? linkify(first.name) : ""}|${other ? linkify(other.name) : ""}|`
         })
 
     /*
@@ -123,7 +144,7 @@ fs.readFile(source_file, "utf8", (err, file_text) => {
 
     ]
 
-    const final_output = [...intro, ...rules, ...format_role(roles[0])].join("\n")
+    const final_output = [...intro, ...rules, ...teams_formatted].join("\n")
 
     // console.log(final_output)
     fs.writeFile(target_file, final_output, err => {

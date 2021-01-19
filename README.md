@@ -56,14 +56,16 @@ Because Sleepwalker must be in the game, put in all character tokens except the 
 ### Night order
 |First night|Other nights|
 |-|-|
-|Weaver|Zenith|
-|Seeker|Wanton|
-|Neolith|Neolith|
-||Cutthroat|
-||Savage|
-||Seeker|
-||Apostle|
-||Mangler|
+|[Weaver](#Weaver)|[Zenith](#Zenith)|
+|[Seeker](#Seeker)|[Wanton](#Wanton)|
+|[Neolith](#Neolith)|[Neolith](#Neolith)|
+||[Cutthroat](#Cutthroat)|
+||[Savage](#Savage)|
+||[Seeker](#Seeker)|
+||[Apostle](#Apostle)|
+||[Mangler](#Mangler)|
+# Peacebroker
+
 ## Zenith
 
 "Each night\*, choose any number of players: if they are on the same team, they cannot die tonight."
@@ -79,12 +81,115 @@ Zenith can protect players of the same alignment.
  - Zenith can choose dead players.
 
 ### Examples
-Zenith chooses themselves. [Cutthroat](#Cutthroat) targets them, but Zenith does not die.
+[Zenith](#Zenith) chooses themselves. [Cutthroat](#Cutthroat) targets them, but [Zenith](#Zenith) does not die.
 
-Zenith was marked by [Neolith](#Neolith) the previous night, and another marked player died today. Zenith chooses themselves and [Calamity](#Calamity), but [Calamity](#Calamity) is killed by the [Savage](#Savage).
+[Zenith](#Zenith) was marked by [Neolith](#Neolith) the previous night, and another marked player died today. [Zenith](#Zenith) chooses themselves and [Calamity](#Calamity), but [Calamity](#Calamity) is killed by the [Savage](#Savage).
 
-Zenith chooses the [Apostle](#Apostle) and [Cutthroat](#Cutthroat). Neither of them are protected, because they are on different teams. The [Neolith](#Neolith)'s ability kills the [Apostle](#Apostle).
+[Zenith](#Zenith) chooses the [Apostle](#Apostle) and [Cutthroat](#Cutthroat). Neither of them are protected, because they are on different teams. The [Neolith](#Neolith)'s ability kills the [Apostle](#Apostle).
 
-Zenith chooses the Weaver tonight. Cutthroat tries to kill the Weaver, but Weaver survives.
+[Zenith](#Zenith) chooses the [Weaver](#Weaver) tonight. [Cutthroat](#Cutthroat) tries to kill the [Weaver](#Weaver), but [Weaver](#Weaver) survives.
 
-Zenith chose themselves tonight. The next day, Calamity is executed. Zenith is killed by Calamity's ability.
+[Zenith](#Zenith) chose themselves tonight. The next day, [Calamity](#Calamity) is executed. [Zenith](#Zenith) is killed by [Calamity](#Calamity)'s ability.
+
+## Calamity
+
+"The 1st time you are executed (not the 1st day), all living players die & all dead players come back to life. You stay dead."
+
+<img src="https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/original-icons/calamity.png" alt="Calamity icon" width="100">
+
+
+
+
+## Elixir
+
+"You cannot die from execution if you were nominated by a fated."
+
+<img src="https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/original-icons/elixir.png" alt="Elixir icon" width="100">
+
+
+
+
+## Sleepwalker
+
+"You do not know you are a Peacebroker. You think that you are either Vile or Fatebound."
+
+<img src="https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/original-icons/sleepwalker.png" alt="Sleepwalker icon" width="100">
+
+
+
+
+# Vile
+
+## Cutthroat
+
+"Each night\*, choose a player who was nominated today: they die."
+
+<img src="https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/original-icons/cutthroat.png" alt="Cutthroat icon" width="100">
+
+
+
+
+## Savage
+
+"Each night\*, choose a player: if they are not on the same team as last executee, they die."
+
+<img src="https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/original-icons/savage.png" alt="Savage icon" width="100">
+
+
+
+
+## Wanton
+
+"Each night\*, if you nominated today, all other non-evil players are poisoned tonight. Otherwise, a player dies tonight."
+
+<img src="https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/original-icons/wanton.png" alt="Wanton icon" width="100">
+
+
+
+
+## Neolith
+
+"Each night, mark a player. If a marked player died today, all marked players are poisoned until dusk & a player dies tonight."
+
+<img src="https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/original-icons/neolith.png" alt="Neolith icon" width="100">
+
+
+
+
+# Fatebound
+
+## Weaver
+
+"You start knowing the entire Grimoire. Players of your alignment register falsely to you in the Grimoire you see."
+
+<img src="https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/original-icons/weaver.png" alt="Weaver icon" width="100">
+
+
+
+
+## Seeker
+
+"You start knowing a player & their alignment. When the player you know dies, you learn another."
+
+<img src="https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/original-icons/seeker.png" alt="Seeker icon" width="100">
+
+
+
+
+## Mangler
+
+"Each night\*, choose 2 players (not yourself): they swap alignments. If just 4 players live, you lose this ability."
+
+<img src="https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/original-icons/mangler.png" alt="Mangler icon" width="100">
+
+
+
+
+## Apostle
+
+"Each night\* you become the alignment of the 1st player who nominated today. When the game ends, you become fated."
+
+<img src="https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/original-icons/apostle.png" alt="Apostle icon" width="100">
+
+
+
