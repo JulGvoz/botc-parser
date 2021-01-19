@@ -56,7 +56,14 @@ fs.readFile(source_file, "utf8", (err, file_text) => {
       "This is *fan-made content*. [Blood on the Clocktower](https://bloodontheclocktower.com) is owned by Steven Medway and [The Pandemonium Institute](https://www.thepandemoniuminstitute.com). ",
       "",
       `Designed and curated by ${meta.author}${meta.helpers && meta.helpers.length > 0 ? ", with help from " + helpers_formated : ""}.`,
+      "",
+      ...(meta.iconCredit && meta.iconCredit.length > 0 ? ["Icon credit:",
+        ...(meta.iconCredit.map(source => ` - ${source}`)),
+        ""] : [])
     ]
     console.log(intro.join("\n"))
+    fs.writeFile(target_file, intro.join("\n"), undefined, (err) => {
+      console.error(err)
+    })
   }
 })
