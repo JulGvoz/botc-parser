@@ -2,7 +2,7 @@
   "name": "botc-parser",
   "version": "0.0.1",
   "description": "JSON to Markdown parser for Blood on the Clocktower homebrew scripts",
-  "main": "index.js",
+  "main": "parser.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -34,7 +34,6 @@ fs.readFile(source_file, "utf8", (err, file_text) => {
 
     const load_link = `https://raw.githubusercontent.com/${meta.github.replace("https://github.com/", "")}/${source_file}`
 
-    console.log(meta.helpers)
     const helpers_formated =
       !meta.helpers || meta.helpers.length == 0 ? "" :
         meta.helpers.length == 1 ? meta.helpers[0] :
@@ -61,9 +60,24 @@ fs.readFile(source_file, "utf8", (err, file_text) => {
         ...(meta.iconCredit.map(source => ` - ${source}`)),
         ""] : [])
     ]
-    console.log(intro.join("\n"))
-    fs.writeFile(target_file, intro.join("\n"), undefined, (err) => {
-      console.error(err)
+
+    const rules = [
+      "## Homebrew rules",
+      "",
+      ...(meta.homebrewRules ? meta.homebrewRules : []),
+      "",
+      "### Night order",
+      "|-|-|",
+
+    ]
+
+    const final_output = [...intro, ...rules].join("\n")
+
+    console.log(final_output)
+    fs.writeFile(target_file, final_output, err => {
+      if (err) {
+        console.log(err)
+      }
     })
   }
 })
