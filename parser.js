@@ -1,5 +1,8 @@
 const fs = require('fs');
 
+const zip = (a, b) =>
+  Array.from(Array(Math.max(b.length, a.length)), (_, i) => [a[i], b[i]]);
+
 const source_file = process.argv[2] ? process.argv[2] : "roles.json"
 const target_file = process.argv[3] ? process.argv[3] : "README.md"
 
@@ -32,6 +35,15 @@ fs.readFile(source_file, "utf8", (err, file_text) => {
           return a.otherNight - b.otherNight
         })
 
+    const nights_table = zip(first_night, other_night)
+    // Night orders formatted for Markdown: ["|a|b|", "|c|d|", ...]
+    const nights_str =
+      nights_table
+        .map(([first, other]) => {
+          return `|${first ? first.name : ""}|${other ? other.name : ""}|`
+        })
+
+    // link for loading the json file through bra1n tool
     const load_link = `https://raw.githubusercontent.com/${meta.github.replace("https://github.com/", "")}/${source_file}`
 
     const helpers_formated =
@@ -67,13 +79,15 @@ fs.readFile(source_file, "utf8", (err, file_text) => {
       ...(meta.homebrewRules ? meta.homebrewRules : []),
       "",
       "### Night order",
+      "|First night|Other nights|",
       "|-|-|",
+      ...nights_str,
 
     ]
 
     const final_output = [...intro, ...rules].join("\n")
 
-    console.log(final_output)
+    // console.log(final_output)
     fs.writeFile(target_file, final_output, err => {
       if (err) {
         console.log(err)

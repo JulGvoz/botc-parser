@@ -50,4 +50,17 @@ Players | Peacebroker | Fatebound | Vile
 11|4|4<sup>\[\*\]</sup>|4<sup>\[\*\]</sup>
 
 <sup>\[\*\]</sup>
-Because [Sleepwalker](#Sleepwalker) must be in the game, put in all character tokens except the Sleepwalker in the bag, and then assign the "Sleepwalker" reminder token to a Vile or a Fatebound player.
+Because Sleepwalker must be in the game, put in all character tokens except the Sleepwalker in the bag, and then assign the "Sleepwalker" reminder token to a Vile or a Fatebound player.
+
+
+### Night order
+|First night|Other nights|
+|-|-|
+|Weaver|Zenith|
+|Seeker|Wanton|
+|Neolith|Neolith|
+||Cutthroat|
+||Savage|
+||Seeker|
+||Apostle|
+||Mangler|
