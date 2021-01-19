@@ -14,10 +14,45 @@ fs.readFile(source_file, "utf8", (err, file_text) => {
 
     // broad information
     const meta = raw_data.filter(c => c.id === "_meta")[0]
-    const roles = raw_data.filter(c => c.id !== "_meta")
+    // exclude hidden roles and meta
+    const roles = raw_data.filter(c => c.id !== "_meta" && !c.hidden)
 
     // usually ["good", "evil"], but for me - ["peacebroker", "vile", "fatebound"]
     const team_names = [...new Set(roles.map(role => role.team))]
+
+    const teams = team_names.map(team_name => {
+      return {
+        team_name: team_name,
+        roles: roles.filter(role => role.team === team_name)
+      }
+    })
+
+    // many files will simply use the github base anyway
+    const github_base = `https://raw.githubusercontent.com/${meta.github.replace("https://github.com/", "")}`
+
+    // link for loading the json file through bra1n tool
+    const load_link = `${github_base}/${source_file}`
+
+    const format_role = (role) => {
+      return [
+        `## ${role.name}`,
+        "",
+        // *sigh* - apparently I don't how to replace * -> \* ...
+        `"${role.ability.replace("*", String.fromCharCode(92) + "*")}"`,
+        "",
+        `<img src="${github_base}/master/original-icons/zenith.png" alt="${role.name} icon" width="100">`,
+        "",
+        `${role.blurb}`,
+        "",
+        ...(role.explanations.map(str => ` - ${str}`)),
+        "",
+        "### Examples",
+        ...(role.examples.flatMap(str => {
+          return [str, ""]
+        }))
+      ]
+    }
+    console.log(format_role(roles[0]))
 
     // roles that act on the first night, ordered
     const first_night =
@@ -43,9 +78,12 @@ fs.readFile(source_file, "utf8", (err, file_text) => {
           return `|${first ? first.name : ""}|${other ? other.name : ""}|`
         })
 
-    // link for loading the json file through bra1n tool
-    const load_link = `https://raw.githubusercontent.com/${meta.github.replace("https://github.com/", "")}/${source_file}`
-
+    /*
+    We have to make sure not to list out helpers 
+    if there is no meta.helpers
+    if there is only 1 helper, we musn't add "and"
+    otherwise, simply join together with ", " and join the last one using "and"
+    */
     const helpers_formated =
       !meta.helpers || meta.helpers.length == 0 ? "" :
         meta.helpers.length == 1 ? meta.helpers[0] :
@@ -85,7 +123,7 @@ fs.readFile(source_file, "utf8", (err, file_text) => {
 
     ]
 
-    const final_output = [...intro, ...rules].join("\n")
+    const final_output = [...intro, ...rules, ...format_role(roles[0])].join("\n")
 
     // console.log(final_output)
     fs.writeFile(target_file, final_output, err => {
