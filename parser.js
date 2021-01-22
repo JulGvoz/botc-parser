@@ -6,7 +6,7 @@ const zip = (a, b) =>
 // replace Zenith => [Zenith](#Zenith)
 const linkify = (str, roles) => {
   return roles.reduce((acc, role, index, arr) => {
-    return acc.replace(new RegExp(`${role.name}`, "g"), `[${role.name}](#${role.name})`)
+    return acc.replace(new RegExp(`${role.name}`, "g"), `[${role.name}](#${role.name.toLowerCase().replace(' ', '-')})`)
   }, str)
 }
 
@@ -103,7 +103,7 @@ const parse_json = (json) => {
     return [
       `# ${capitalize(team.name)}`,
       // If a team has a description in meta.teams, write it out here
-      ...(Array(meta.teams ? meta.teams[team.name] : "")),
+      ...(Array(meta && meta.teams ? meta.teams[team.name] : "")),
       ...(team.roles.flatMap(format_role))
     ]
   }
@@ -136,19 +136,23 @@ const parse_json = (json) => {
         return `|${first ? linkify(first.name, roles) : ""}|${other ? linkify(other.name, roles) : ""}|`
       })
 
-  const rules = [
-    "## Homebrew rules",
-    "",
-    ...(meta.homebrewRules ? meta.homebrewRules : []),
-    "",
+  const night_order = [
     "### Night order",
     "|First night|Other nights|",
     "|-|-|",
-    ...nights_str,
-
+    ...nights_str
   ]
 
-  const final_output = [...generate_intro(meta), ...rules, ...teams_formatted].join("\n")
+  const rules = meta ? [
+    "## Homebrew rules",
+    "",
+    ...(meta.homebrewRules ? meta.homebrewRules : []),
+    ""
+  ] : []
+
+
+
+  const final_output = [...(meta ? generate_intro(meta) : []), ...rules, ...night_order, ...teams_formatted].join("\n")
 
   // console.log(final_output)
   return final_output;
