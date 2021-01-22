@@ -24,7 +24,13 @@ fs.readFile(source_file, "utf8", (err, file_text) => {
     const raw_data = JSON.parse(file_text)
 
     const mapped = raw_data.map(role => {
-      return roles.filter(r => remove_underscore(r.id) === remove_underscore(role.id))[0]
+      const enriched = roles.filter(r => remove_underscore(r.id) === remove_underscore(role.id))[0]
+
+      if (!enriched) {
+        return role
+      } else {
+        return enriched
+      }
     })
 
     fs.writeFile(target_file, parse_json(mapped), err => {

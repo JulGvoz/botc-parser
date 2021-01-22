@@ -103,12 +103,10 @@ const parse_json = (json) => {
     return [
       `# ${capitalize(team.name)}`,
       // If a team has a description in meta.teams, write it out here
-      ...(Array(meta && meta.teams ? meta.teams[team.name] : "")),
+      ...(meta && meta.teams ? meta.teams[team.name] : []),
       ...(team.roles.flatMap(format_role))
     ]
   }
-
-  console.log(team_names)
 
   const teams_formatted = teams.flatMap(format_team)
 
@@ -150,9 +148,18 @@ const parse_json = (json) => {
     ""
   ] : []
 
+  const role_list_table = roles.map(role => {
+    return `|${linkify(role.name, roles)}|<img src="${image_link(meta, role)}" alt="${role.name} icon" width="50">|${role.ability}|`
+  })
+
+  const role_table = [
+    "|Name|Icon|Ability|",
+    "|-|-|-|",
+    ...role_list_table
+  ]
 
 
-  const final_output = [...(meta ? generate_intro(meta) : []), ...rules, ...night_order, ...teams_formatted].join("\n")
+  const final_output = [...(meta ? generate_intro(meta) : []), ...role_table, ...rules, ...night_order, ...teams_formatted].join("\n")
 
   // console.log(final_output)
   return final_output;
