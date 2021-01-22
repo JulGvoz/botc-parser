@@ -72,7 +72,7 @@ Because Sleepwalker must be in the game, put in all character tokens except the 
 
 <img src="https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/original-icons/zenith.png" alt="Zenith icon" width="100">
 
-Zenith can protect players of the same alignment.
+**Zenith** can protect players of the same alignment.
 
  - Zenith does not care about character type, only on alignment.
  - If a character states that someone dies tonight, players protected by Zenith cannot die from that character.
@@ -97,8 +97,21 @@ Zenith can protect players of the same alignment.
 
 <img src="https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/original-icons/calamity.png" alt="Calamity icon" width="100">
 
+**Calamity** causes living and dead to flip if someone dares to execute them.
 
+ - If Calamity is executed during the 1st day, nothing happens, and their ability is used up.
+ - Calamity's ability can often end in multiple teams dying out. In that case, multiple teams win.
+ - Calamity being executed while dead does nothing, since they have no ability while dead.
+ - Your ability triggers before the game ends (so if all other players of your alignment were dead, they will become alive and the game will not end)
 
+### Examples
+Good [Apostle](#Apostle) and [Cutthroat](#Cutthroat) are dead, [Mangler](#Mangler), [Neolith](#Neolith), [Zenith](#Zenith) and [Calamity](#Calamity) are alive. [Calamity](#Calamity) is executed. Now Good [Apostle](#Apostle) and [Cutthroat](#Cutthroat) are alive, everyone else is dead. All fated are dead, so the game ends, and evil wins.
+
+[Calamity](#Calamity) is executed on the first day. [Calamity](#Calamity)'s ability does not trigger.
+
+[Zenith](#Zenith), [Seeker](#Seeker) and [Savage](#Savage) are dead, meanwhile [Calamity](#Calamity), [Sleepwalker](#Sleepwalker), [Cutthroat](#Cutthroat) and [Mangler](#Mangler) are alive. [Calamity](#Calamity) is executed. Now [Zenith](#Zenith), [Seeker](#Seeker) and [Savage](#Savage) are alive, [Calamity](#Calamity), [Sleepwalker](#Sleepwalker), [Cutthroat](#Cutthroat) and [Mangler](#Mangler) are dead. [Zenith](#Zenith), [Seeker](#Seeker) and [Savage](#Savage) are all on different teams, so the game continues and goes into night.
+
+[Calamity](#Calamity) is poisoned by [Neolith](#Neolith). [Calamity](#Calamity) is executed, but nothing happens.
 
 ## Elixir
 
@@ -106,8 +119,19 @@ Zenith can protect players of the same alignment.
 
 <img src="https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/original-icons/elixir.png" alt="Elixir icon" width="100">
 
+**Elixir** is protected from fated alignment players during executions.
 
+ - If a good or evil Fatebound nominated and executed them, Elixir's ability does not trigger.
+ - If fated Vile or Peacebroker nominated and executed them, Elixir is executed but does not die.
 
+### Examples
+[Elixir](#Elixir) is nominated by fated [Seeker](#Seeker), and put on the block. Nobody else is put on the block. [Elixir](#Elixir) is executed, but survives.
+
+[Elixir](#Elixir) is nominated by fated [Apostle](#Apostle), and put on the block. Later, [Cutthroat](#Cutthroat) is put on the block and executed. [Elixir](#Elixir)'s ability does not trigger.
+
+[Elixir](#Elixir) is nominated by fated [Cutthroat](#Cutthroat), and put on the block. Nobody else is put on the block. [Elixir](#Elixir) is executed, but survives.
+
+[Elixir](#Elixir) is nominated by evil [Seeker](#Seeker). [Elixir](#Elixir) is executed and dies.
 
 ## Sleepwalker
 
@@ -117,6 +141,21 @@ Zenith can protect players of the same alignment.
 
 
 
+ - During setup, the Sleepwalker's token does not go in the bag. Instead, a Vile or Fatebound character goes in the bag (Your choice), and the player who draws that token is secretly the Sleepwalker for the whole game. You know. They do not.
+ - If you put an extra Vile token, the Sleepwalker must be a Vile. Accordingly with Fatebound.
+ - Sleepwalker has no ability. Whenever their Vile or Fatebound ability would affect the game in some way, it doesn't. However, you pretend that they are the character they think they are. If that character would wake at night, wake the Sleepwalker instead and act as if they were that character. If that character would gain information, you may give them false information instead - and you're encouraged to do so.
+ - The Sleepwalker begins thinking they are evil (if given a Vile token) or fated (if given a Fatebound token). If their ability can change their alignment, you may lie to them about their new alignment.
+ - If the Sleepwalker thinks their ability couldn't modify their alignment, you cannot lie to them about their alignment other than them thinking that they are their normal starting alignment. If they think they are Vile (and evil), and they turn evil, do not notify them of an alignment change (accordingly with Fatefound and fated). If they would turn good, tell them they became good.
+ - You may give explicit indication that Sleepwalker is the Sleepwalker through their information.
+
+### Examples
+[Sleepwalker](#Sleepwalker), who thinks they are [Cutthroat](#Cutthroat), targets the [Seeker](#Seeker), but nobody dies tonight.
+
+[Sleepwalker](#Sleepwalker), who thinks they are [Seeker](#Seeker), sees the evil [Cutthroat](#Cutthroat) as fated. Later the [Cutthroat](#Cutthroat) is executed, and [Sleepwalker](#Sleepwalker) sees themselves as good, even though they think they are fated.
+
+[Sleepwalker](#Sleepwalker), who thinks they are [Weaver](#Weaver), sees [Cutthroat](#Cutthroat) as [Calamity](#Calamity), [Calamity](#Calamity) as [Sleepwalker](#Sleepwalker) who thinks they are [Seeker](#Seeker), [Savage](#Savage) as [Savage](#Savage), [Seeker](#Seeker) as [Zenith](#Zenith) and [Apostle](#Apostle) as [Neolith](#Neolith). Later, [Sleepwalker](#Sleepwalker) dies, then [Calamity](#Calamity) revives them. They wake up to see all characters as [Savage](#Savage)s - proving to them that they are a [Sleepwalker](#Sleepwalker).
+
+[Sleepwalker](#Sleepwalker), who thinks they are [Neolith](#Neolith), marked the [Apostle](#Apostle). [Apostle](#Apostle) didn't die tonight, but nobody dies from the [Neolith](#Neolith) ability.
 
 # Vile
 
@@ -126,8 +165,23 @@ Zenith can protect players of the same alignment.
 
 <img src="https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/original-icons/cutthroat.png" alt="Cutthroat icon" width="100">
 
+**Cutthroat** threathens and scares people into nominating after being nominated by the fear of death.
 
+ - If nobody was nominated today, Cutthroat does not wake tonight.
+ - Cutthroat may choose a dead player if a dead player was nominated today.
 
+### Examples
+[Mangler](#Mangler) and [Zenith](#Zenith) were nominated today. [Cutthroat](#Cutthroat) wakes, but has forgotten who were nominated. They try choosing the [Savage](#Savage), but Storyteller indicates "no", then points to viable players. [Cutthroat](#Cutthroat) then chooses [Mangler](#Mangler), who dies.
+
+Nobody was nominated today. [Cutthroat](#Cutthroat) does not wake. Nobody dies today.
+
+Dead [Calamity](#Calamity) and [Cutthroat](#Cutthroat) were nominated today. [Cutthroat](#Cutthroat) chooses the dead [Calamity](#Calamity).
+
+Only [Cutthroat](#Cutthroat) was nominated today. [Cutthroat](#Cutthroat) is forced to kill themselves today.
+
+[Cutthroat](#Cutthroat) attacks the [Calamity](#Calamity), but [Zenith](#Zenith) chose [Calamity](#Calamity) and [Zenith](#Zenith) that night. Nobody dies.
+
+[Seeker](#Seeker) was nominated today. [Cutthroat](#Cutthroat) chooses [Seeker](#Seeker). [Seeker](#Seeker) dies.
 
 ## Savage
 
@@ -135,8 +189,24 @@ Zenith can protect players of the same alignment.
 
 <img src="https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/original-icons/savage.png" alt="Savage icon" width="100">
 
+**Savage** equalizes the game, by killing players of different alignements than those that were executed today.
 
+ - Savage wakes each night starting with 2nd night, and chooses a player.
+ - When a player is executed, place the "Last executee" reminder token near them.
+ - If nobody was executed today, the "Last executee" token remains on the last player.
+ - If nobody was executed in the game yet, Savage can kill anyone.
+ - If Savage is brought back to life later in the game, retroactively place the "Last executee" reminder token on the approipriate player.
 
+### Examples
+On the 1st day, nobody was executed. [Savage](#Savage) chooses the [Apostle](#Apostle), [Apostle](#Apostle) dies.
+
+Today, good [Calamity](#Calamity) was executed and [Savage](#Savage) is brought back to life. [Savage](#Savage) can only kill evil or fated player tonight.
+
+Today evil [Apostle](#Apostle) was executed. [Savage](#Savage) chooses [Cutthroat](#Cutthroat), who doesn't die.
+
+On the 1st day good [Zenith](#Zenith) was executed, but nobody was executed on the 2nd day. Tonight, [Savage](#Savage) choose the good [Calamity](#Calamity), who doesn't die, because they were on the same team as the last executee, who was the good [Zenith](#Zenith).
+
+[Cutthroat](#Cutthroat) was executed today, and [Savage](#Savage) decides to target the dead [Cutthroat](#Cutthroat) to hide a kill.
 
 ## Wanton
 
@@ -144,8 +214,20 @@ Zenith can protect players of the same alignment.
 
 <img src="https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/original-icons/wanton.png" alt="Wanton icon" width="100">
 
+**Wanton** wages their bets between poisoning others and exposing themselves.
 
+ - If you did not nominate today, the Storyteller choses a living player who can die today to die.
+ - Wanton poisons good and fated players (but not themselves), regardless of character type..
+ - Wanton only poisons during the night, and doesn't influence day abilities.
 
+### Examples
+Good [Wanton](#Wanton) nominated the [Seeker](#Seeker) today. During night, [Zenith](#Zenith) protects themselves and [Calamity](#Calamity), but evil [Cutthroat](#Cutthroat) still kills [Zenith](#Zenith), because [Zenith](#Zenith) is poisoned tonight by the good [Wanton](#Wanton).
+
+All living players except the [Wanton](#Wanton) nominated today. Storyteller decides to kill [Zenith](#Zenith).
+
+Nobody nominated today. [Zenith](#Zenith) is protecting themselves and [Calamity](#Calamity), so Storyteller has to kill someone between [Wanton](#Wanton) and [Weaver](#Weaver). Storyteller decides to kill [Wanton](#Wanton).
+
+Fated [Wanton](#Wanton) nominated [Zenith](#Zenith) today and later [Weaver](#Weaver) nominated [Elixir](#Elixir). [Elixir](#Elixir) is nominated but does not die. Tonight, [Seeker](#Seeker)'s known target died, they learn [Wanton](#Wanton) and see "Good", because they are poisoned by the [Wanton](#Wanton).
 
 ## Neolith
 
@@ -153,8 +235,14 @@ Zenith can protect players of the same alignment.
 
 <img src="https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/original-icons/neolith.png" alt="Neolith icon" width="100">
 
+Neolith slowly marks players, unleashing a surprise attack if they show any weakness.
 
-
+ - When players are marked, they remain marked until the end of the game.
+ - When Neolith dies, "Marked" reminder tokens are removed
+ - Players remain marked even if they die.
+ - Neolith wakes even if a marked player died.
+ - If a marked player died today, when neolith marks another player, that player is also poisoned.
+ - Storyteller chooses who Neolith kills. Neolith does not learn of the target.
 
 # Fatebound
 
@@ -164,8 +252,14 @@ Zenith can protect players of the same alignment.
 
 <img src="https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/original-icons/weaver.png" alt="Weaver icon" width="100">
 
+Weaver knows the fate of all but their own.
 
-
+ - Before showing the Grimoire to Weaver, the Storyteller must save the real grimoire (taking a screenshot or a photo. It is often useful to do this even if Weaver is not in play), show a modified Grimoire, and then restore the Grimoire.
+ - All Fatebound characters must be replaced with Vile or Peacebroker characters.
+ - If there is a Sleepwalker who thinks that they are Fatebound, Weaver sees the Fatebound character with the "Sleepwalker" reminder token next to them.
+ - Duplicate or paper tokens may be required, as the Weaver could see duplicate tokens.
+ - Weaver's teammates can register as Sleepwalkers too. In that case, either the original Fatebound character or any other character can be shown.
+ - Weaver should not see alignment tokens next to characters.
 
 ## Seeker
 
@@ -173,8 +267,12 @@ Zenith can protect players of the same alignment.
 
 <img src="https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/original-icons/seeker.png" alt="Seeker icon" width="100">
 
+Seeker searches for a person who's fate they can accept... killing all the others in the process. They always know the alignment of a player, and each time the player they know dies, they learn another.
 
-
+ - The Storyteller can show the Seeker themselves (not recommended).
+ - Seeker only wakes if the player who they knew died before them during night or day.
+ - If Seeker would die tonight, they cannot learn another player.
+ - If the player Seeker knows changes alignment, Seeker does not learn this.
 
 ## Mangler
 
@@ -182,8 +280,12 @@ Zenith can protect players of the same alignment.
 
 <img src="https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/original-icons/mangler.png" alt="Mangler icon" width="100">
 
+Mangler twists people's fates, tangling them in a web.
 
-
+ - After Mangler makes their choice, if the players they chose have different alignments, wake each of them separately and tell them of their alignment change.
+ - If Mangler causes all players of a team to become dead, the game ends.
+ - If Mangler chooses 2 players of the same alignment, nothing happens.
+ - If night started with more than 4 players alive, but when Mangler acts enough players died so that only 4 or 3 players live, Mangler doesn't wake.
 
 ## Apostle
 
@@ -191,5 +293,11 @@ Zenith can protect players of the same alignment.
 
 <img src="https://raw.githubusercontent.com/JulGvoz/twisted-fates/master/original-icons/apostle.png" alt="Apostle icon" width="100">
 
+Apostle carries out their mission at any cost.
 
-
+ - If Apostle dies as good or evil, they will stay good or evil even if game ends.
+ - If the game ends with good or evil winning, Apostle turns fated and loses instead.
+ - Apostle turning fated due to game ending cannot continue the game.
+ - If Apostle would win, but turns fated, they lose, unless all good are dead too.
+ - If Apostle is the last remaining player of a team and die, they remain that alignment.
+ - If Apostle is the last remaining player of a team and changes alignement, game ends and then apostle turns fated.
